@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>test</title>
+	<style type="text/css">
+		#move {
+			position: relative;
+			width: 100px;
+			height: 100px;
+			border-radius: 50%;
+			background-color:rgb(100,200,200);
+		}
+	</style>
+</head>
+<body>
+	<div id="move"></div>
+	<script type="text/javascript" src="move.js"></script>
+	<script type="text/javascript">
+		var move = document.getElementById('move')
+		console.log(move)
+		move.onclick = function(){
+			startMove(this, 'left', 400,function(){
+				console.log(1)
+				alert('I have moved!!!')
+			})
+		}
+	</script>
+</body>
+</html>
