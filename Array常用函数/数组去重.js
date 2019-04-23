@@ -44,3 +44,15 @@ function unique3(arr){
  } 
  return res;
 }
+
+//4.利用数组的indexOf下标属性来查询
+
+function unique4(arr){
+ var res = [];
+ for(var i=0; i<arr.length; i++){
+  if(res.indexOf(arr[i]) == -1){
+   res.push(arr[i]);
+  }
+ }
+ return res;
+}
