@@ -91,3 +91,21 @@ function unique7(arr){
  }); 
  return res;
 }
+
+//8.利用splice方法，遍历数组去除重复项
+
+function unique8(arr){
+ var i,
+  j,
+  len = arr.length; 
+ for(i = 0; i < len; i++){
+  for(j = i + 1; j < len; j++){
+   if(arr[i] == arr[j]){
+    arr.splice(j,1);
+    len--;
+    j--;
+   }
+  }
+ }
+ return arr;
+}
