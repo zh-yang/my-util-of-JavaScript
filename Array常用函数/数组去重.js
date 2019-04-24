@@ -109,3 +109,10 @@ function unique8(arr){
  }
  return arr;
 }
+
+//9.利用Es6的set方法
+function unique10(arr){
+ //Set数据结构，它类似于数组，其成员的值都是唯一的
+ return Array.from(new Set(arr)); // 利用Array.from将Set结构转换成数组
+}
+ 
