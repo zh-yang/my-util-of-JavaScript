@@ -70,3 +70,24 @@ function unique5(arr){
  return res;
 }
 
+//6.indexOf加filter方法
+
+function unique6(arr){
+ var res = [];
+  
+ res = arr.filter(function(item,idx,self){
+  return self.indexOf(item) === idx;
+ });
+ return res;
+}
+
+//7.forEach加includes方法
+
+function unique7(arr){
+ var res = [];
+  
+ arr.forEach(function(item){
+  res.includes(item) || res.push(item);
+ }); 
+ return res;
+}
