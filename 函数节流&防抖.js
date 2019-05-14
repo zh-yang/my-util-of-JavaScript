@@ -10,3 +10,17 @@ function throttle(fn, dealy){
     }
   }
 }
+
+
+//防抖
+function debounce(fn, dealy){
+  let timerId = null;
+  return function(){
+    const context = this;
+    if(timerId){window.clearTimeout(timerId)}
+    timerId = setTimeout(()=>{
+      fn.apply(context, arguments);
+      timerId = null;
+    },dealy)
+  }
+}
